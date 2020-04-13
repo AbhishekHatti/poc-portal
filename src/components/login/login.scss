@@ -1,0 +1,22 @@
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row-reverse;
+  //   justify-content: center;
+  //   align-items: center;
+}
+.row {
+  background-color: blue;
+}
+.col {
+  @include flexCenter();
+
+  display: flex;
+
+  background-color: brown;
+  &:hover {
+    background-color: chartreuse;
+  }
+}
+.wel {
+  @extend .col;
+}
